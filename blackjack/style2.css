@@ -1,0 +1,60 @@
+.points{
+    display:flex;
+    height: 50%;
+    /* border: 2px solid rgb(255, 255, 255); */
+}
+.points div{
+    /* border: 2px solid white; */
+    width: 100%;
+    text-align: center;
+    font-size: 2em;
+}
+.dealer-p{
+    margin-top: 20%;
+}
+.user-p{
+    margin-top: 20%;
+}
+.action{
+    height: 15%;
+    width: 100%;
+    /* border: 2px solid white; */
+}
+.action{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#hit{
+    font-size: 3em;
+    padding: 0.2em 1em;
+    font-family:fantasy;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    border: none;
+}
+#hit:hover{
+    background-color: rgba(128, 0, 0, 0.8);
+    transform: scale(0.9);
+    color: white;
+}
+#pass{
+    font-size: 3em;
+    padding: 0.2em 1em;
+    font-family: fantasy;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+    border: none;
+}
+#pass:hover{
+    background-color: rgba(128, 0, 0, 0.8);
+    transform: scale(0.9);
+    color: white;
+}
+
+.result{
+    font-size: 3em;
+    text-align: center;
+    align-items: center;
+}

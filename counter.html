@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.938);
+        }
+        .main{
+            background-color: gray;
+            width: 20%;
+            justify-self: center;
+            height: auto;
+            justify-items: center;
+            padding: 1.5em;
+            min-width: 20%;
+            margin: 3% auto;
+        }
+        .main div{
+            margin: 2em;
+        }
+        .main div button{
+            padding: 1.5em;
+        }
+        .disp{
+            height: 30px;
+            text-align: center;
+            color: white;
+            font-size: 2.5em;
+            font-family: cursive;
+        }
+        button{
+            font-size: 1.5em;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: white;
+            transition: 0.2s ease;
+        }
+        button:hover{
+            box-shadow: 1px 1px 1px 1px black;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        .inc button{
+            background-color: rgba(0, 128, 0, 0.3);
+        }
+        .dec button{
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+        .save button{
+            background-color: rgba(0, 81, 255, 0.3);
+        }
+        .reset button{
+            background-color: rgba(255, 234, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="disp">
+            
+        </div>
+        <div class="inc">
+            <button id="incr">INCREAMENT</button>
+        </div>
+        <div class="dec">
+            <button id="decr">DECREAMENT</button>
+        </div>
+        <div class="save">
+            <button id="decr">SAVE</button>
+        </div>
+        <div class="reset">
+            <button id="decr">RESET</button>
+        </div>
+    </div>
+    <script>
+        let v = 0;
+        
+        let x = document.querySelector('.disp')
+        x.innerHTML = v;
+        document.querySelector('#incr').onclick = function(){
+            v = v+1;
+            x.innerHTML = v;
+        }
+        document.querySelector('#decr').onclick = function() {
+        if (v > 0) {
+            v = v - 1;
+            x.innerHTML = v;
+        }
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'ArrowUp') { // Increment with "Arrow Up" key
+                v = v + 1;
+                x.innerHTML = v;
+            } else if (event.key === 'ArrowDown' && v>0) { // Decrement with "Arrow Down" key
+                v = v - 1;
+                x.innerHTML = v;
+            }
+        });
+        document.querySelector('.save button').onclick = function(){
+            console.log(v);
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 's') { // Save with "s" key
+                console.log(v);
+            }
+        });
+        document.querySelector('.reset button').onclick = function(){
+            v = 0;
+            x.innerHTML = v;
+        }
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'r') { // Reset with "r" key
+                v = 0;
+                x.innerHTML = v;
+            }
+        });
+        let y = prompt("enter your name: ");
+        alert("Hello "+y+"! Welcome to the counter");
+    </script>
+</body>
+</html>
