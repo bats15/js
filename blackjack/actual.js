@@ -44,3 +44,31 @@ document.querySelector('#pass').addEventListener('click', function () {
         res.innerHTML = "Draw";
     }
 });
+
+document.addEventListener('keydown', function (event) {
+    if (event.code === 'Space') {
+        x = Math.floor(Math.random() * 11) + 1;
+        y = Math.floor(Math.random() * 11) + 1;
+        z = x + y;
+        r.innerHTML = z;
+
+        a = Math.floor(Math.random() * 11) + 1;
+        b = Math.floor(Math.random() * 11) + 1;
+        c = a + b;
+        s.innerHTML = c;
+
+        arr = [];
+        for (let i = 0; i < 51; i++) {
+            arr.push(Math.floor(Math.random() * 11) + 1);
+        }
+
+        res.innerHTML = "";
+    }
+});
+document.addEventListener('keydown', function (event) {
+    if (event.code === 'ArrowLeft') {
+        document.querySelector('#pass').click();
+    } else if (event.code === 'ArrowRight') {
+        document.querySelector('#hit').click();
+    }
+});
