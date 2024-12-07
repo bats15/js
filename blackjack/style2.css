@@ -33,6 +33,7 @@
     border-radius: 10px;
     transition: 0.2s ease-in;
     border: none;
+    border: 2px solid white;
 }
 #hit:hover{
     background-color: rgba(128, 0, 0, 0.8);
@@ -46,6 +47,7 @@
     border-radius: 10px;
     transition: 0.2s ease-in;
     border: none;
+    border: 2px solid white;
 }
 #pass:hover{
     background-color: rgba(128, 0, 0, 0.8);

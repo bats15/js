@@ -12,16 +12,14 @@ let c = a + b;
 let s = document.querySelector('.user-p');
 s.innerHTML = c;
 
-let arr = [];
-for (let i = 0; i < 51; i++) {
-    arr.push(Math.floor(Math.random() * 11) + 1);
-}
+let num = Math.floor(Math.random() * 11)+1;
 
 let res = document.querySelector('.result');
 
 document.querySelector('#hit').addEventListener('click', function () {
     if (c <= 21) {
-        c += arr.shift();
+        c += num;
+        num = Math.floor(Math.random() * 11)+1;
         s.innerHTML = c;
 
         if (c > 21) {
@@ -32,7 +30,7 @@ document.querySelector('#hit').addEventListener('click', function () {
 
 document.querySelector('#pass').addEventListener('click', function () {
     while (z <= 18) {
-        z += arr.shift();
+        z += num;
     }
     r.innerHTML = z;
 
@@ -57,10 +55,7 @@ document.addEventListener('keydown', function (event) {
         c = a + b;
         s.innerHTML = c;
 
-        arr = [];
-        for (let i = 0; i < 51; i++) {
-            arr.push(Math.floor(Math.random() * 11) + 1);
-        }
+        
 
         res.innerHTML = "";
     }
