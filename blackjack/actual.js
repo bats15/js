@@ -57,7 +57,7 @@ document.addEventListener('keydown', function (event) {
 
         
 
-        res.innerHTML = "";
+        res.innerHTML = " ";
     }
 });
 document.addEventListener('keydown', function (event) {
